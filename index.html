@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacature | Eindexamensite.nl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary-dark: #0D315A;
+            --color-primary: #164273;
+            --color-primary-light: #ABC4E5;
+            --color-bg: #F0F9FF;
+            --color-white: #FFFFFF;
+            --color-accent: #BE006C;
+            --color-text: #000000;
+            --color-text-muted: #575C61;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.5;
+            min-height: 100vh;
+            min-height: 100dvh;
+        }
+
+        .page {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+        }
+
+        /* Header met foto */
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .photo-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-primary);
+        }
+
+        .label {
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-accent);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--color-text-muted);
+            font-size: 16px;
+        }
+
+        /* Content card */
+        .card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(13, 49, 90, 0.08);
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: var(--color-bg);
+            border-left: 3px solid var(--color-accent);
+            padding: 16px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 16px 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            padding-left: 4px;
+        }
+
+        li::marker {
+            color: var(--color-accent);
+        }
+
+        /* CTA */
+        .cta {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, var(--color-bg) 80%, transparent);
+            padding: 20px 0 24px;
+            margin: 0 -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--color-primary);
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-sub {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 16px;
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        .footer a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Desktop */
+        @media (min-width: 600px) {
+            .page {
+                padding-top: 48px;
+            }
+
+            .photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .cta {
+                position: static;
+                background: none;
+                margin: 24px 0 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="photo-wrapper">
+                <img src="https://students-avatars.s3.eu-central-1.amazonaws.com/avatars/2025-owner.png" alt="Sander" class="photo">
+                <span class="label">boomer</span>
+            </div>
+            <h1>Boomer zoekt Gen-Z</h1>
+            <p class="subtitle">Voor social media campagne</p>
+        </header>
+
+        <div class="card">
+            <p>Ik run <strong>Eindexamensite.nl</strong> — een examentrainer voor havo/vwo. Probleem: ik snap niks van TikTok. Jij hopelijk wel.</p>
+
+            <div class="highlight">
+                <p>Veel vrijheid, er is budget, en je mag het zelf bedenken.</p>
+            </div>
+
+            <p>Ik zoek <strong>2 studenten</strong> die een campagne opzetten om examenleerlingen te bereiken. Vooral tijdens het CSE is het hands-on.</p>
+        </div>
+
+        <div class="card">
+            <h2>Stuur me je plan</h2>
+            <ul>
+                <li>Welke socials en waarom?</li>
+                <li>Wat voor soort campagne?</li>
+                <li>Wat doe je wanneer?</li>
+                <li>Hoeveel uur heb je nodig?</li>
+                <li>Wat wil je verdienen?</li>
+            </ul>
+        </div>
+
+        <div class="cta">
+            <a href="mailto:sander.bons@eindexamensite.nl?subject=Ik%20wil%20jullie%20campagne%20doen!" class="btn">Mail me je pitch</a>
+            <span class="btn-sub">sander.bons@eindexamensite.nl</span>
+        </div>
+
+        <footer class="footer">
+            <a href="https://eindexamensite.nl">eindexamensite.nl</a> · examentrainer havo/vwo
+        </footer>
+    </div>
+</body>
+</html>
